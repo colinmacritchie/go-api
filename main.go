@@ -31,9 +31,9 @@ var people []Person
 
 
 func main() {
-  people = append(people, Person{ID: "1", Firstname: "John", LastName: "Doe", Address: &Address{City:"City X", State: "State X"}})
-  people = append(people, Person{ID: "2", Firstname: "Tedyy", LastName: "Mitchel", Address: &Address{City:"City y", State: "State y"}})
   router := mux.NewRouter()
+	people = append(people, Person{ID: "1", Firstname: "John", LastName: "Doe", Address: &Address{City:"City X", State: "State X"}})
+  people = append(people, Person{ID: "2", Firstname: "Tedyy", LastName: "Mitchel", Address: &Address{City:"City y", State: "State y"}})
 	router.HandleFunc("/people", GetPeople).Methods("GET")
 	router.HandleFunc("/people/{id}", GetPerson).Methods("GET")
 	router.HandleFunc("/people/{id}", CreatePerson).Methods("POST")
