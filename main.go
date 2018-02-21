@@ -26,6 +26,7 @@ type Address struct {
 	
 }
 
+// Set up people lsit
 var people []Person
 
 
